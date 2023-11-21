@@ -1,10 +1,16 @@
 #!/usr/bin/python3
 import random
 number = random.randint(-10000, 10000)
-if number > 0:
-    print(f"Le nombre {number} est positif")
-elif number == 0:
-    print(f"Le nombre {number} est zéro")
+
+# YOUR CODE HERE
+last_digit = abs(number) % 10
+
+print("Last digit of", number, "is", last_digit, "and", end=" ")
+
+if last_digit > 5:
+    print("is greater than 5")
+elif last_digit == 0:
+    print("is 0")
 else:
-    print(f"Le nombre {number} est négatif")
+    print("and is less than 6 and not 0")
 
