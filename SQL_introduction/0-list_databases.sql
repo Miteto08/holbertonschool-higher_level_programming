@@ -1,0 +1,3 @@
+--jgkjrsgpokgrpo
+--jihrgfiujerzhgiu
+SHOW DATABASES;
