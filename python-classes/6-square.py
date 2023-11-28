@@ -5,14 +5,20 @@
 
 class Square:
     """Shows a square"""
-    def __init__(self, size=0):
+    def __init__(self, size=0, position=(0, 0)):
         """Boot fresh square"""
         self.size = size
+        self.position = position
 
     @property
     def size(self):
         """Acquire current size of square"""
         return self.__size
+
+    @property
+    def position(self):
+        """Le blabla est important"""
+        return self.__position
 
     @size.setter
     def size(self, value):
@@ -22,6 +28,13 @@ class Square:
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
+
+    @position.setter
+    def position(self, value):
+        """La vieille femme est laide"""
+        if type(value) is not tuple:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        self.__position = value
 
     def area(self):
         """Restores current area of square"""
@@ -34,4 +47,3 @@ class Square:
 
         if not self.size:
             print()
-
