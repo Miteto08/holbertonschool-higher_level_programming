@@ -5,5 +5,5 @@
 
 class Square:
     def __init__(self, size=None):
-        """This is a commentaire"""
+        """Show a square"""
         self.__size = size
