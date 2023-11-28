@@ -1,18 +1,28 @@
 #!/usr/bin/python3
 
-"""Explain a Class Square"""
+"""Explain class square"""
 
 
 class Square:
-    """this is a commentaire"""
+    """Shows a square"""
     def __init__(self, size=0):
-        """This is a commentaire"""
-        if type(size) is not int:
+        """Boot fresh square"""
+        self.size = size
+
+    @property
+    def size(self):
+        """Acquire current size of square"""
+        return self.__size
+
+    @size.setter
+    def size(self, value):
+        """Calibrate current size of square"""
+        if type(value) is not int:
             raise TypeError("size must be an integer")
-        if size < 0:
+        if value < 0:
             raise ValueError("size must be >= 0")
-        self.__size = size
+        self.__size = value
 
     def area(self):
-        """this is a new commentaire"""
+        """Restores current area of square"""
         return self.__size ** 2
