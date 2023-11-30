@@ -1,13 +1,13 @@
 #!/usr/bin/node
 
-function readFile(filePath) {
-    try {
-        const file = new FileReader();
-        file.readAsText(filePath, "utf-8");
-        file.onload = () => {
-            console.log(file.result);
-        };
-    } catch (error) {
-        console.log(error);
-    }
-}
+const fs = require('fs');
+
+const filePath = process.argv[2];
+
+fs.readFile(filePath, 'utf8', (error, content) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log(content);
+  }
+});
